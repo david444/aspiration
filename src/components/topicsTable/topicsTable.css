@@ -1,0 +1,11 @@
+.stargazers-table{
+    border:1px solid rgb(218, 217, 217);
+}
+
+.stargazers-table tbody tr td{
+    align-items: baseline;
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: center;
+    
+}
