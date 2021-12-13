@@ -10,10 +10,6 @@
 Runs the project, there is no testing script to run. I'm still learning the testing side of react. 
 
 
-## Git key
-The github key was sen't on an email
-
-
 ## Future Improvements
 Feel free to elaborate on how you would improve any of the following topics
 * Code Structuring: Because I haven't worked on a large react project, from all the tutorials that I've made I think this is the one that I liked the most, I looks like it scale well on large applicatiions.

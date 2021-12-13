@@ -20,25 +20,29 @@ const TopicsTable:React.FC=()=>{
         <p> Related topics <input type="number" max="10" min="1" value={numberOfTopics} onChange={(e)=>{ setNumberOfTopics(+ e.target.value)}} /> </p>
         {
             topics.length < 1 ?//This helps to not have an error when the array is empty
-            <p>Loading...</p>:
-            <table className="stargazers-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        {
-                            topics.map(topic=> <th key={topic.name}> <a href="/" onClick={(e)=>{handleTopicClick(topic.name, e)}}> {topic.name.toLocaleUpperCase()} </a>  </th> )
-                        }
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Stargazers count</td>
-                        {
-                            topics.map(topic=> <td key={topic.name}> {topic.stargazers.totalCount} </td> )
-                        }
-                    </tr>
-                </tbody>
-            </table>
+            <p>Loading...</p>
+            :
+            <>
+                <p>Current topic: {topic.toLocaleUpperCase()}</p>
+                <table className="stargazers-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            {
+                                topics.map(topic=> <th key={topic.name}> <a href="/" onClick={(e)=>{handleTopicClick(topic.name, e)}}> {topic.name.toLocaleUpperCase()} </a>  </th> )
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stargazers count</td>
+                            {
+                                topics.map(topic=> <td key={topic.name}> {topic.stargazers.totalCount} </td> )
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </>
     }
     </div>
 }
